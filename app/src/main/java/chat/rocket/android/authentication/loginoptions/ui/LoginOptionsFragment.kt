@@ -432,15 +432,15 @@ class LoginOptionsFragment : Fragment(), LoginOptionsView {
             when (requestCode) {
                 REQUEST_CODE_FOR_OAUTH -> {
                     presenter.authenticateWithOauth(
-                        data.getStringExtra(INTENT_OAUTH_CREDENTIAL_TOKEN),
-                        data.getStringExtra(INTENT_OAUTH_CREDENTIAL_SECRET)
+                            data.getStringExtra(INTENT_OAUTH_CREDENTIAL_TOKEN)!!,
+                            data.getStringExtra(INTENT_OAUTH_CREDENTIAL_SECRET)!!
                     )
                 }
                 REQUEST_CODE_FOR_CAS -> presenter.authenticateWithCas(
-                    data.getStringExtra(INTENT_SSO_TOKEN)
+                        data.getStringExtra(INTENT_SSO_TOKEN)!!
                 )
                 REQUEST_CODE_FOR_SAML -> data.apply {
-                    presenter.authenticateWithSaml(getStringExtra(INTENT_SSO_TOKEN))
+                    presenter.authenticateWithSaml(getStringExtra(INTENT_SSO_TOKEN)!!)
                 }
             }
         }

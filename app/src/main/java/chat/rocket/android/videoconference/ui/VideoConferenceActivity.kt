@@ -33,8 +33,8 @@ class VideoConferenceActivity : AppCompatActivity(), JitsiVideoConferenceView,
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
 
-        chatRoomId = intent.getStringExtra(INTENT_CHAT_ROOM_ID)
-        chatRoomType = intent.getStringExtra(INTENT_CHAT_ROOM_TYPE)
+        chatRoomId = intent.getStringExtra(INTENT_CHAT_ROOM_ID)!!
+        chatRoomType = intent.getStringExtra(INTENT_CHAT_ROOM_TYPE)!!
 
         with(presenter) {
             setup(chatRoomId, chatRoomType)

@@ -41,10 +41,10 @@ class OauthWebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
-        webPageUrl = intent.getStringExtra(INTENT_WEB_PAGE_URL)
+        webPageUrl = intent.getStringExtra(INTENT_WEB_PAGE_URL)!!
         requireNotNull(webPageUrl) { "no web_page_url provided in Intent extras" }
 
-        state = intent.getStringExtra(INTENT_STATE)
+        state = intent.getStringExtra(INTENT_STATE)!!
         requireNotNull(state) { "no state provided in Intent extras" }
 
         // Ensures that the cookies is always removed when opening the webview.

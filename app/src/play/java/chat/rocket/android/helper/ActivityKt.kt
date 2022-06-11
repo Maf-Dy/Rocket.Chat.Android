@@ -19,7 +19,7 @@ fun Activity.requestStoredCredentials(): Pair<String, String>? {
 }
 
 fun getCredentials(data: Intent): Pair<String, String>? {
-    val credentials: Credential = data.getParcelableExtra(Credential.EXTRA_KEY)
+    val credentials: Credential = data.getParcelableExtra(Credential.EXTRA_KEY)!!
     return credentials.password?.let {
         Pair(credentials.id, it)
     }

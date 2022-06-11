@@ -29,7 +29,7 @@ class PlayerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
-        videoUrl = intent.getStringExtra(URL_KEY)
+        videoUrl = intent.getStringExtra(URL_KEY)!!
     }
 
     override fun onStart() {

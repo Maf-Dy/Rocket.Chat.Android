@@ -30,7 +30,7 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
-        webPageUrl = intent.getStringExtra(INTENT_WEB_PAGE_URL)
+        webPageUrl = intent.getStringExtra(INTENT_WEB_PAGE_URL)!!
         requireNotNull(webPageUrl) { "no web_page_url provided in Intent extras" }
         toolbarTitle = intent.getStringExtra(TOOLBAR_TITLE)
 

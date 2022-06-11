@@ -100,7 +100,7 @@ class AuthenticationActivity : AppCompatActivity(), HasSupportFragmentInjector {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId) {
             R.id.action_terms_of_Service -> presenter.termsOfService(getString(R.string.action_terms_of_service))
             R.id.action_privacy_policy -> presenter.privacyPolicy(getString(R.string.action_privacy_policy))
